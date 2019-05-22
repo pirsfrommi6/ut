@@ -1,0 +1,32 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #343D46;
+
+  overflow-y: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.header {
+  margin: 0 auto;
+}
+
+.main {
+  width: auto;  
+  height: 400px;
+  
+  overflow: hidden;
+}

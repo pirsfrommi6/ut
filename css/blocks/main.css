@@ -1,0 +1,171 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.clips {
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  overflow-x: scroll;
+
+  scroll-behavior: smooth;
+}
+
+.clip {
+  position: relative;
+
+  margin: 10px;
+  margin-bottom: 30px;
+  min-width: 270px;
+  width: 300px;
+  min-height: 390px;
+  flex-shrink: 0;
+
+  background-color: white;
+  border-radius: 7px; 
+
+  overflow: hidden;  
+}
+
+.clip:hover {
+  box-shadow: 5px 12px 30px -10px rgba(0,0,0,1);
+}
+
+.clip-link {
+  display: block;
+  padding: 0 20px;
+
+  color: black;
+  text-decoration: none;
+}
+
+.clip-link:hover,
+.clip-link:focus,
+.clip-link:active {
+  text-decoration: underline;
+}
+
+.clip-preview {
+  margin-bottom: 20px;
+}
+
+.clip-img {
+  width: 100%;
+}
+
+.clip-title {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  padding: 10px 0;
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  word-break: break-all;
+
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.clip-info {
+  padding-left: 40px;
+}
+
+.clip-author,
+.clip-date,
+.clip-count {
+  position: relative;
+
+  font-weight: 500;
+
+}
+
+.clip-author {
+  font-size: 12px;
+}
+
+.clip-date {
+  font-size: 14px;
+}
+
+.clip-count {
+  font-size: 14px;
+}
+
+.clip-author::before,
+.clip-date::before, 
+.clip-count::before {
+  position: absolute;
+  left: -20px;
+  bottom: 2px;
+  width: 12px;
+  height: 12px;
+
+  display: block;
+  content: '';
+
+  background-size: 12px;
+  filter: opacity(0.3);
+}
+
+.clip-author::before {
+  background-image: url('../../img/user.svg');
+}
+
+.clip-date::before {
+  bottom: 3px;
+  background-image: url('../../img/date.svg');
+}
+
+.clip-count::before {
+  left: -22px;
+  bottom: 1px;
+  width: 16px;
+  height: 16px;
+
+  background-image: url('../../img/view.svg');
+  background-size: 16px;
+}
+
+.clip-description {
+  padding: 0 10px;
+  max-height: 90px;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-style: italic;
+  color: rgba(0,0,0,0.4);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.clip-novisibile {
+  display: none;
+}
+
+@media only screen and (max-width : 720px) {
+  .clips {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width : 720px) and (max-width : 1130px) {
+  .clips {
+    width: 640px;
+  }
+}
+
+@media only screen and (min-width : 1130px) and (max-width : 1430px) {
+  .clips {
+    width: 960px;
+  }
+}
+
